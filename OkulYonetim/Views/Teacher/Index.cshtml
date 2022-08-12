@@ -1,0 +1,55 @@
+﻿@model IEnumerable<OkulYonetim.Models.Teacher>
+
+    <style>
+        #container {
+            margin-top: 30px;
+        }
+    </style>
+
+<div class="container px-0" id="container">
+    <div class="row gx-5" id="baslık">
+        <div class="col col-6">
+            <h3 class="alert-info">ÖĞRETMEN LİSTESİ</h3>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Teacher" asp-action="Create" class="btn  btn-primary">YENİ ÖĞRETMEN EKLE</a>
+        </div>
+    </div>
+</div>
+@if (Model.Count() > 0)
+{
+    <table class="table-primary table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th scope="col">İSİM</th>
+                <th scope="col">SOYİSİM</th>
+                <th scope="col">YAŞ</th>
+                <th scope="col">ADRES</th>
+                <th scope="col">İŞLEM</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td width="30%">@item.FirstName</td>
+                <td width="30%">@item.LastName</td>
+                <td width="10%">@item.Age</td>
+                <td width="20%">@item.Address</td>
+                <td width="10%">
+                    <div class="w-100 btn-group" role="group">
+                        <a asp-controller="Teacher" asp-action="Update" asp-route-Id="@item.Id" class="btn btn-primary mx-1">GÜNCELLE</a>
+                        <a asp-controller="Teacher" asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-danger mx-1">SİL</a>
+
+                    </div>
+                </td>
+
+            </tr>
+
+            }
+
+        </tbody>
+    </table>
+
+}
+

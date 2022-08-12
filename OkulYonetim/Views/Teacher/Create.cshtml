@@ -1,0 +1,49 @@
+﻿@model OkulYonetim.Models.Teacher
+
+<form method="post" asp-action="Create" style="margin-top:30px;">
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3 border bg-light">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">İsim :</span>
+                        <input type="text" class="form-control" asp-for="FirstName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Soyisim :</span>
+                        <input type="text" class="form-control" asp-for="LastName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Adres :</span>
+                        <input type="text" class="form-control" asp-for="Address" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Yaş :</span>
+                        <input type="text" class="form-control" asp-for="Age" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </div>
+            <input class="btn btn-primary w-100" style="margin-top:35px;" type="submit" value="OLUŞTUR">
+            <button type="submit" asp-action="Index" style="margin-top:5px;" class="btn btn-danger w-100">GERİ</button>
+
+
+
+        </div>
+    </div>
+    
+
+</form>
+
+@*<button class="btn btn-primary" asp-action="Index" type="submit">Geri</button>*@

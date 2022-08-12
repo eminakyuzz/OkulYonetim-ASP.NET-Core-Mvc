@@ -1,0 +1,41 @@
+﻿<style>
+    .row {
+        margin-top:25px;
+    }
+    .card {
+        background-color: #ECE9E9;
+    }
+
+    /*#F9F8F8*/
+</style>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Öğrenciler</h5>
+                <p class="card-text">Öğrenci Listesi İçin Tıklayınız</p>
+                <a  class="btn btn-primary" asp-controller="Student" asp-action="Index">Git</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Öğretmenler</h5>
+                <p class="card-text">Öğretmen Listesi İçin Tıklayınız</p>
+                <a  class="btn btn-primary" asp-controller="Teacher" asp-action="Index">Git</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Dersler</h5>
+                <p class="card-text">Ders Listesi İçin Tıklayınız</p>
+                <a  class="btn btn-primary" asp-controller="Lesson" asp-action="Index">Git</a>
+            </div>
+        </div>
+    </div>
+</div>
+

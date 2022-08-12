@@ -1,0 +1,27 @@
+﻿@model OkulYonetim.Models.Student
+
+<form method="post" asp-action="DeletePost" style="margin-top:30px;">
+    <input asp-for="StudentNo" hidden />
+    <div class="row g-3">
+        <div class="col-3">
+            <label asp-for="FirtsName">İsim </label>
+            <input type="text" disabled class="form-control" asp-for="FirtsName">
+        </div>
+        <div class="col-3">
+            <label asp-for="LastName">Soyisim</label>
+            <input type="text" disabled class="form-control" asp-for="LastName">
+        </div>
+        <div class="col-3">
+            <label asp-for="Age">Yaş</label>
+            <input type="text" disabled class="form-control" asp-for="Age">
+        </div>
+        <div class="col-3">
+            <input type="submit" class="btn btn-danger w-75 " value="Sil" />
+            <a asp-action="Index" class="btn btn-secondary w-75">Geri</a>
+        </div>
+
+    </div>
+
+</form>
+
+

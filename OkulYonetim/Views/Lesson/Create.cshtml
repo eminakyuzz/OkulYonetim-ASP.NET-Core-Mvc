@@ -1,0 +1,16 @@
+﻿@model OkulYonetim.Models.Lesson
+
+<form method="post" asp-action="Create" style="margin-top:30px;">
+    <div class="row g-3">
+        
+        <div class="col-lg-4">
+            <label asp-for="Name">Ders Adı :</label>
+            <input type="text" class="form-control" asp-for="Name">
+        </div>
+        <input class="btn btn-primary w-100" style="margin-top:35px;" type="submit" value="OLUŞTUR">
+        <button type="submit" asp-action="Index" style="margin-top:5px;" class="btn btn-danger w-100">GERİ</button>
+
+    </div>
+
+</form>
+

@@ -1,0 +1,23 @@
+﻿@model OkulYonetim.Models.Student
+
+
+<form method="post" asp-action="Create" style="margin-top:30px;">
+    <div class="row g-3">
+        <div class="col-lg-4">
+            <label asp-for="FirtsName">İsim :</label>
+            <input type="text" class="form-control" asp-for="FirtsName">
+        </div>
+        <div class="col-lg-4">
+            <label asp-for="LastName">Soyisim :</label>
+            <input type="text" class="form-control" asp-for="LastName">
+        </div>
+        <div class="col-lg-4">
+            <label asp-for="Age">Yaş :</label>
+            <input type="text" class="form-control" asp-for="Age">
+        </div>
+        <input class="btn btn-primary w-100" style="margin-top:35px;" type="submit" value="OLUŞTUR">
+        <button type="submit" asp-action="Index" style="margin-top:5px;" class="btn btn-danger w-100">GERİ</button>
+
+    </div>
+
+</form>
